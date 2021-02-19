@@ -85,7 +85,7 @@ class MoviesApp {
     }
 
     fillYearFilterBox(){
-        const yearsArr = this.yearCounts.map((year,yearCount) => {
+        const yearsArr = this.yearCounts.map((year) => {
             return this.createFilterByYearEl(year[0],year[1])
         }).join("");
         this.$yearFilter.innerHTML = yearsArr;
@@ -127,7 +127,7 @@ class MoviesApp {
         return `<div class="form-check"> <input class="form-check-input" type="checkbox" name="genre" value="${fGenre}"> <label class="form-check-label" > ${fGenre} (${fGenreCount}) </label> </div>`
     }
     fillGenreFilterBox(){
-        const genreArr = this.genreCounts.map((genre, genreCount) => {
+        const genreArr = this.genreCounts.map((genre) => {
             return this.createFilterByGenreEl(genre[0],genre[1])
         }).join("");
         this.$genreFilter.innerHTML = genreArr;
