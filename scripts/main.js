@@ -81,7 +81,7 @@ class MoviesApp {
         }
 
     createFilterByYearEl(fYear,fYearCnt){
-        return `<div class="form-check"><input class="form-check-input" type="radio" name="year" value="${fYear}"><label class="form-check-label" for="year1">${fYear} (${fYearCnt}) </label></div>`
+        return `<div class="form-check"><input class="form-check-input" type="radio" name="year" id="${fYear}" value="${fYear}"><label class="form-check-label" for="${fYear}">${fYear} (${fYearCnt}) </label></div>`
     }
 
     fillYearFilterBox(){
@@ -124,7 +124,7 @@ class MoviesApp {
 
 
     createFilterByGenreEl(fGenre, fGenreCount){
-        return `<div class="form-check"> <input class="form-check-input" type="checkbox" name="genre" value="${fGenre}"> <label class="form-check-label" > ${fGenre} (${fGenreCount}) </label> </div>`
+        return `<div class="form-check"> <input class="form-check-input" type="checkbox" name="genre" id="${fGenre}" value="${fGenre}"> <label class="form-check-label" for="${fGenre}"  > ${fGenre} (${fGenreCount}) </label> </div>`
     }
     fillGenreFilterBox(){
         const genreArr = this.genreCounts.map((genre) => {
